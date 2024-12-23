@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<h1>Contact Us</h1>
+<form>
+<div class="input-group">
+<label class="text">Full Name</label>
+<img src="User.png" alt="">
+<input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+<span id="name-error"></span>
+</div>
+<div class="input-group">
+<img src="User.png" alt="">
+<label>Phone No.</label> 
+<input type="tel" placeholder="0916 074 7353" id="contact-phone" onkeyup="validatePhone()">
+<span id="phone-error"></span>
+</div>
+<div class="input-group">
+<label>Email ID</label>
+<img src="User.png" alt="">
+<input type="email" placeholder="Enter email" id="contact-email" onkeyup="validateEmail()">
+<span id="email-error"></span>
+</div>
+<div class="input-group">
+<label>Your message</label>
+<textarea rows="5" placeholder="Enter your message"  id="contact-message" onkeyup="validateMessage()"></textarea>
+<span id="message-error"></span>
+</div>
+<button type="submit" onclick="return validateForm()">Submit</button>
+<span id="submit-error"></span>
+</div>
+</form>
+
+<script src="Script.js"></script>
+</body>
+</html>
